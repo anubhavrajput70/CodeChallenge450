@@ -40,7 +40,7 @@ public class FindDuplicate {
 		}
 		return 0;
 	}
-	
+
 	//hash set approach time= O(n) space = O(n)
 	public static int duplicate_set(int arr[],int n)
 	{
@@ -55,20 +55,20 @@ public class FindDuplicate {
 		return 0;
 	}
 	//slow and fast pointer approach time= O(n) space = O(1)
-		public static int duplicate_slowfast(int arr[],int n)
+	public static int duplicate_slowfast(int arr[],int n)
+	{
+		int slow=0,fast=0;
+		do {
+			slow=arr[slow];
+			fast=arr[arr[fast]];
+		} while(slow!=fast);
+		slow=0;
+		while(slow!=fast)
 		{
-			int slow=0,fast=0;
-			do {
-				slow=arr[slow];
-				fast=arr[arr[fast]];
-			} while(slow!=fast);
-			slow=0;
-			while(slow!=fast)
-			{
-				slow=arr[slow];
-				fast=arr[fast];
-			}
-			return slow;
+			slow=arr[slow];
+			fast=arr[fast];
 		}
+		return slow;
+	}
 
 }

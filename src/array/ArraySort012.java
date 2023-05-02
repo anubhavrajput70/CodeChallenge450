@@ -7,7 +7,7 @@ public class ArraySort012 {
 		int arr[]= {0, 2, 1, 2, 0};
 		int n=5;
 		sort012(arr,n);
-		
+
 	}
 	static void sort012(int arr[],int n)
 	{
