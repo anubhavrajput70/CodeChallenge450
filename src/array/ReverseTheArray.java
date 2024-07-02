@@ -7,7 +7,6 @@ public class ReverseTheArray {
 		int arr[]= {1,2,3,4,5,6,7};
 		int n=7;
 		reverse(arr,n);
-
 	}
 	public static void reverse(int[] arr,int n)
 	{
